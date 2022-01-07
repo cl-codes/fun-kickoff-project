@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 const bcrypt = require("bcryptjs");
 
-const dailyAvailabilitySchema = new mongoose.Schema({
+const timeRangeSchema = new mongoose.Schema({
   startTime: {
     type: Date,
     required: true,
@@ -13,13 +13,13 @@ const dailyAvailabilitySchema = new mongoose.Schema({
 })
 
 const availabilitySchema = new mongoose.Schema({
-  monday: [dailyAvailabilitySchema],
-  tuesday: [dailyAvailabilitySchema],
-  wednesday: [dailyAvailabilitySchema],
-  thursday: [dailyAvailabilitySchema],
-  friday: [dailyAvailabilitySchema],
-  saturday: [dailyAvailabilitySchema],
-  sunday: [dailyAvailabilitySchema],
+  monday: [timeRangeSchema],
+  tuesday: [timeRangeSchema],
+  wednesday: [timeRangeSchema],
+  thursday: [timeRangeSchema],
+  friday: [timeRangeSchema],
+  saturday: [timeRangeSchema],
+  sunday: [timeRangeSchema],
 })
 
 const phoneNumberSchema = new mongoose.Schema({
