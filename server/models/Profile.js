@@ -1,49 +1,30 @@
 const mongoose = require("mongoose");
 const bcrypt = require("bcryptjs");
 
-const paymentSchema = new mongoose.Schema({
-  card_nickname: {
-    type: String,
-    required: true,
-  },
-  credit_card_number: {
-    type: String,
-    match: '[0-9]{16}',
-    required: true,
-  },
-  expiry_date: {
+const dailyAvailabilitySchema = new mongoose.Schema({
+  startTime: {
     type: Date,
     required: true,
   },
-  cardholder_name: {
-    type: String,
-    required: true,
-  },
-  card_type: {
-    type: String,
-    enum: ['Visa', 'Mastercard', 'Amex',],
+  endTime: {
+    type: Date,
     required: true,
   },
 })
 
 const availabilitySchema = new mongoose.Schema({
-  calendar_date: {
-    type: Date,
-    required: true,
-  },
-  start_time: {
-    type: Date,
-    required: true
-  },
-  end_time: {
-    type: Date,
-    required: true
-  },
+  monday: [dailyAvailabilitySchema],
+  tuesday: [dailyAvailabilitySchema],
+  wednesday: [dailyAvailabilitySchema],
+  thursday: [dailyAvailabilitySchema],
+  friday: [dailyAvailabilitySchema],
+  saturday: [dailyAvailabilitySchema],
+  sunday: [dailyAvailabilitySchema],
 })
 
 const phoneNumberSchema = new mongoose.Schema({
   nickname: String,
-  phone_number: {
+  phoneNumber: {
     type: String,
     required: true
   }
@@ -54,11 +35,11 @@ const profileSchema = new mongoose.Schema({
     type: mongoose.SchemaTypes.ObjectId,
     ref: 'User',
   },
-  first_name: {
+  firstName: {
     type: String,
     required: true,
   },
-  last_name: {
+  lastName: {
     type: String,
     required: true,
   },
@@ -67,18 +48,17 @@ const profileSchema = new mongoose.Schema({
     enum: ['Male', 'Female', 'Non-binary'],
     required: true,
   },
-  birth_date: {
+  birthDate: {
     type: Date,
     required: true
   },
-  phone_number: [phoneNumberSchema],
+  phoneNumber: [phoneNumberSchema],
   address: {
     type: String,
     required: true
   },
   description: String,
-  profile_photo_url: String,
-  payment_methods: [paymentSchema],
+  profilePhotoUrl: String,
   availability: [availabilitySchema],
 
 });
