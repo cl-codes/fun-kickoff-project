@@ -48,7 +48,7 @@ export default function Login({ handleSubmit }: Props): JSX.Element {
         <form onSubmit={handleSubmit} className={classes.form} noValidate>
           <TextField
             id="email"
-            label={<Typography className={classes.label}>E-mail address</Typography>}
+            label={<Typography className={classes.label}>Email address</Typography>}
             fullWidth
             margin="normal"
             InputLabelProps={{
@@ -63,6 +63,7 @@ export default function Login({ handleSubmit }: Props): JSX.Element {
             helperText={touched.email ? errors.email : ''}
             error={touched.email && Boolean(errors.email)}
             value={values.email}
+            placeholder="Your email"
             onChange={handleChange}
           />
           <TextField
@@ -82,6 +83,7 @@ export default function Login({ handleSubmit }: Props): JSX.Element {
             helperText={touched.password ? errors.password : ''}
             error={touched.password && Boolean(errors.password)}
             value={values.password}
+            placeholder="Your password"
             onChange={handleChange}
           />
           <Box textAlign="center" marginTop={5}>

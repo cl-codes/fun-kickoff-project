@@ -46,16 +46,16 @@ export default function Register(): JSX.Element {
           flexDirection="column"
           className={classes.authWrapper}
         >
-          <AuthHeader linkTo="/login" asideText="Already have an account?" btnText="Login" />
-          <Box width="100%" maxWidth={450} p={3} alignSelf="center">
+          <Box width="100%" maxWidth={400} p={3} alignSelf="center">
             <Grid container>
               <Grid item xs>
-                <Typography className={classes.welcome} component="h1" variant="h5">
-                  Create an account
+                <Typography component="h1" variant="h5" className={classes.welcome} align="center">
+                  Sign up
                 </Typography>
               </Grid>
             </Grid>
             <SignUpForm handleSubmit={handleSubmit} />
+            <AuthHeader linkTo="/login" asideText="Already a member?" btnText="Login" />
           </Box>
           <Box p={1} alignSelf="center" />
         </Box>

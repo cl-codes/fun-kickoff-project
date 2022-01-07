@@ -8,13 +8,12 @@ const useStyles = makeStyles((theme: Theme) => ({
   },
   accAside: {
     fontSize: 14,
-    color: '#b0b0b0',
-    fontWeight: 400,
-    textAlign: 'center',
+    color: '#000000',
+    fontWeight: '700',
     whiteSpace: 'nowrap',
     display: 'flex',
     alignItems: 'center',
-    padding: '1rem',
+    paddingRight: '0.3rem',
   },
   accBtn: {
     width: 170,
@@ -24,6 +23,9 @@ const useStyles = makeStyles((theme: Theme) => ({
     backgroundColor: '#ffffff',
     color: '#3a8dff',
     boxShadow: 'none',
+  },
+  link: {
+    color: 'primary',
   },
 }));
 

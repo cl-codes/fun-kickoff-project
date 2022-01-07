@@ -1,16 +1,20 @@
+import { NoEncryption } from '@mui/icons-material';
 import { createTheme } from '@mui/material/styles';
 
 export const theme = createTheme({
   typography: {
-    fontFamily: '"Open Sans", "sans-serif", "Roboto"',
+    fontFamily: '"Roboto", "Open Sans", "sans-serif"',
     fontSize: 12,
     button: {
-      textTransform: 'none',
+      textTransform: 'uppercase',
       fontWeight: 700,
+      fontSize: 14,
+      boxShadow: 'none',
+      outline: 'none',
     },
   },
   palette: {
-    primary: { main: '#3A8DFF' },
+    primary: { main: '#f14140' },
   },
   shape: {
     borderRadius: 5,
