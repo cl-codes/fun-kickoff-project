@@ -6,6 +6,7 @@ import CircularProgress from '@mui/material/CircularProgress';
 import { Formik, FormikHelpers } from 'formik';
 import * as Yup from 'yup';
 import useStyles from './useStyles';
+import FormLabel from '@mui/material/FormLabel';
 
 interface Props {
   handleSubmit: (
@@ -46,11 +47,21 @@ export default function Login({ handleSubmit }: Props): JSX.Element {
     >
       {({ handleSubmit, handleChange, values, touched, errors, isSubmitting }) => (
         <form onSubmit={handleSubmit} className={classes.form} noValidate>
+          <FormLabel
+            sx={{
+              fontWeight: 700,
+              letterSpacing: '0.5px',
+              textTransform: 'uppercase',
+              fontSize: '10px',
+              color: 'rgb(0,0,0,1)',
+            }}
+          >
+            Email address
+          </FormLabel>
           <TextField
             id="email"
-            label={<Typography className={classes.label}>Email address</Typography>}
             fullWidth
-            margin="normal"
+            sx={{ marginBottom: '10px' }}
             InputLabelProps={{
               shrink: true,
             }}
@@ -66,11 +77,21 @@ export default function Login({ handleSubmit }: Props): JSX.Element {
             placeholder="Your email"
             onChange={handleChange}
           />
+          <FormLabel
+            sx={{
+              fontWeight: 700,
+              letterSpacing: '0.5px',
+              textTransform: 'uppercase',
+              fontSize: '10px',
+              color: 'rgb(0,0,0,1)',
+            }}
+          >
+            Password
+          </FormLabel>
           <TextField
             id="password"
-            label={<Typography className={classes.label}>Password</Typography>}
             fullWidth
-            margin="normal"
+            sx={{ marginBottom: '10px' }}
             InputLabelProps={{
               shrink: true,
             }}
@@ -87,7 +108,21 @@ export default function Login({ handleSubmit }: Props): JSX.Element {
             onChange={handleChange}
           />
           <Box textAlign="center" marginTop={5}>
-            <Button type="submit" size="large" variant="contained" color="primary" className={classes.submit}>
+            <Button
+              sx={{
+                boxShadow: 'none',
+                height: '45px',
+                width: '130px',
+                marginBottom: '3rem',
+                fontSize: '11px',
+                fontWeight: '700',
+              }}
+              type="submit"
+              size="large"
+              variant="contained"
+              color="primary"
+              className={classes.submit}
+            >
               {isSubmitting ? <CircularProgress style={{ color: 'white' }} /> : 'Login'}
             </Button>
           </Box>

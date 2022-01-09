@@ -37,7 +37,19 @@ export default function Login(): JSX.Element {
 
   return (
     <Grid container component="main" className={classes.root}>
-      <Grid item xs={12} sm={8} md={7} elevation={6} component={Paper} square>
+      <Grid
+        item
+        xs={12}
+        sm={8}
+        md={7}
+        elevation={6}
+        component={Paper}
+        square
+        marginTop="4em"
+        marginBottom="4em"
+        marginLeft="auto"
+        marginRight="auto"
+      >
         <Box
           display="flex"
           justifyContent="space-between"
@@ -45,10 +57,20 @@ export default function Login(): JSX.Element {
           flexDirection="column"
           className={classes.authWrapper}
         >
-          <Box width="100%" maxWidth={400} p={3} alignSelf="center">
+          <Box width="100%" maxWidth={350} p={3} alignSelf="center">
             <Grid container>
               <Grid item xs>
-                <Typography className={classes.welcome} component="h1" variant="h5" align="center">
+                <Typography
+                  sx={{
+                    fontWeight: 700,
+                    fontSize: 30,
+                    letterSpacing: '0.3px',
+                  }}
+                  className={classes.welcome}
+                  component="h1"
+                  variant="h5"
+                  align="center"
+                >
                   Welcome back!
                 </Typography>
               </Grid>

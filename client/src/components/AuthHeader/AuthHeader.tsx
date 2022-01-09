@@ -21,11 +21,18 @@ const AuthFooter = ({ linkTo, asideText, btnText }: Props): JSX.Element => {
       alignSelf="flex-end"
       marginRight={0}
       className={classes.authHeader}
+      sx={{
+        fontWeight: '500',
+        fontSize: '13px',
+        color: '#f14140',
+        marginBottom: '2rem',
+        letterSpacing: '0.1px',
+      }}
     >
-      <Typography className={classes.accAside}>{asideText}</Typography>
-      <Link to={linkTo} className={classes.link}>
-        {btnText}
-      </Link>
+      <Typography className={classes.accAside} sx={{ fontWeight: '500', fontSize: '13px', letterSpacing: '0.1px' }}>
+        {asideText}
+      </Typography>
+      <Link to={linkTo}>{btnText}</Link>
     </Box>
   );
 };
