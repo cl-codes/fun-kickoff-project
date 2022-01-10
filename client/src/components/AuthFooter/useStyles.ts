@@ -2,7 +2,7 @@ import { Theme } from '@mui/material/styles';
 import { makeStyles } from '@mui/styles';
 
 const useStyles = makeStyles((theme: Theme) => ({
-  authHeader: {
+  authFooter: {
     alignItems: 'center',
     flexWrap: 'wrap',
   },

@@ -16,12 +16,12 @@ const AuthFooter = ({ linkTo, asideText, btnText }: Props): JSX.Element => {
   return (
     <Box
       p={1}
-      display="flex"
-      justifyContent="center"
-      alignSelf="flex-end"
-      marginRight={0}
-      className={classes.authHeader}
+      className={classes.authFooter}
       sx={{
+        display: 'flex',
+        justifyContent: 'center',
+        alignSelf: 'flex-end',
+        marginRight: 0,
         fontWeight: '500',
         fontSize: '13px',
         color: '#f14140',
