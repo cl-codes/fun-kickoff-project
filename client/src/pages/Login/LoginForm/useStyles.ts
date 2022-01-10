@@ -6,15 +6,11 @@ const useStyles = makeStyles((theme: Theme) => ({
     width: '100%', // Fix IE 11 issue.
     marginTop: theme.spacing(1),
   },
-  label: {
-    fontSize: 19,
-    color: 'rgb(0,0,0,0.4)',
-    paddingLeft: '5px',
-  },
   inputs: {
-    marginTop: '.8rem',
+    margin: '0.3rem',
+    marginLeft: '0.5rem',
     height: '2rem',
-    padding: '5px',
+    padding: '0px',
   },
   forgot: {
     paddingRight: 10,
@@ -22,14 +18,8 @@ const useStyles = makeStyles((theme: Theme) => ({
   },
   submit: {
     margin: theme.spacing(3, 2, 2),
-    padding: 10,
-    width: 160,
-    height: 56,
     borderRadius: theme.shape.borderRadius,
-    marginTop: 49,
-    fontSize: 16,
-    backgroundColor: '#3a8dff',
-    fontWeight: 'bold',
+    backgroundColor: '#f14140',
   },
 }));
 
