@@ -1,6 +1,5 @@
 const Profile = require("../models/Profile");
 const asyncHandler = require("express-async-handler");
-const generateToken = require("../utils/generateToken");
 const User = require("../models/User");
 
 // @route POST /profile/new
@@ -25,7 +24,7 @@ exports.createProfile = asyncHandler(async (req, res, next) => {
   if (profile) {
     res.status(201).json({
       success: true,
-      success: {
+      data: {
         profile: {
           user: profile.user,
           username: profile.username,
@@ -112,14 +111,15 @@ exports.getAllProfiles = asyncHandler(async (req, res, next) => {
   const result = await Profile.find();
   
   if (!result) {
-    res.status(401);
-    throw new Error("No profiles");
-  }
-  
-  res.status(200).json({
-    success: {
-      result
+    res.status(200).json(
+      []
+    );
+  } else {
+    res.status(200).json({
+      success: {
+        result
+        }
       }
-    }
-  );
+    );
+  }
 });
