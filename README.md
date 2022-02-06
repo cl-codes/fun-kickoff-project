@@ -1,10 +1,10 @@
-## Project Name
+## Loving Sitter
 
-This is a little description about your project.
+A web application to connect pet owners (who need help finding a sitter for their dogs) and pet sitters (who are looking for cute dogs to take care of, and make some cash along the way).
 
-**Tech Stack:** MongoDB, Express.js, React.js, Node.js, Typescript
+**Tech Stack:** React.js / Material-UI, TypeScript, Express.js, Node.js, MongoDB, Stripe, Cloudinary
 
-**Contributors**: [Hatchways](https://github.com/hatchways) (replace)
+**Contributors**: [Ahmad Habib](https://github.com/Habib-Ahmad), [Rizki Perdana](https://github.com/rizperdana), [Chad Napper](https://github.com/ChadNaps), [Crystal Li](https://github.com/cl-codes)
 
 ---
 
@@ -33,7 +33,7 @@ This is a little description about your project.
 
 ### Demo
 
-1. Registration. Users will be able to create a new account using their email and password
+1. Sign up. Users will be able to create a new account using their email and password
 
 ![Signup Demo](demo/images/signup.png)
 
