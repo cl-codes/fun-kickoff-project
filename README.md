@@ -33,10 +33,10 @@ A web application to connect pet owners (who need help finding a sitter for thei
 
 ### Demo
 
-1. Sign up. Users will be able to create a new account using their email and password
+1. Sign up. Users will be able to create a new account using their email, name, and password. There is also a 'demo' option which does not require login.
 
 ![Signup Demo](demo/images/signup.png)
 
-2. Dashboard. Here is a description about what a user can expect to see
+2. Dashboard. Once logged in, users can view potential pet sitters. Clicking on each card will lead to their profiles and booking pages.
 
 ![Dashboard](demo/images/dashboard.png)
